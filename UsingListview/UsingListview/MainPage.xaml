@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="UsingListview.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UsingListview">
+
+    <StackLayout>
+        <Button
+            x:Name="btn_SimpleListview"
+            Clicked="Btn_SimpleListview_Clicked"
+            Text="Simple Listview" />
+
+        <Button
+            x:Name="btn_GroupListView"
+            Clicked="Btn_GroupListView_Clicked"
+            Text="Group Listview" />
+    </StackLayout>
+
+</ContentPage>

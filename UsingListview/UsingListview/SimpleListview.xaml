@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="UsingListview.SimpleListview"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <ListView
+            x:Name="lv_Flower"
+            HasUnevenRows="True"
+            IsEnabled="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Image
+                                Grid.Row="0"
+                                Grid.RowSpan="3"
+                                Grid.Column="0"
+                                HeightRequest="50"
+                                Source="{Binding Image}" />
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Text="{Binding Name}"
+                                TextColor="#3b35b6" />
+
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Text="{Binding Description}"
+                                TextColor="#d97698" />
+
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Text="{Binding Price}"
+                                TextColor="#76e7dc" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
